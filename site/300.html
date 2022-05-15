@@ -1,0 +1,175 @@
+<meta charset="UTF-8" >
+<html lang="zh-cn">
+<head> 
+  <title>300字</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f86767;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 31px;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px;
+  padding-left: 70px;
+  padding-right: 25px;
+  position: relative;
+  background-color: inherit;
+  width: 100%;
+}
+
+/* The box on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(255, 255, 255);
+  border: 5px solid #000000;
+  top: 15px;
+  border-radius: 20%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+
+</style>
+</head>
+
+
+<body>
+
+<div class="timeline">
+  <div class="container right">
+    <div class="content">
+      <h2>2021 - #1 形而上学的玻璃杯</h2>
+      <p>今天我们修手机时路过宜家，顺便进去吃了顿饭，还在里面转了转。我绕来绕去，终于找到了玻璃杯区。我喜欢玻璃做的东西，我用的碗和杯子是玻璃做的，就连我平常写字桌也是玻璃面。我把宜家每一种杯子都端详了一番。这些玻璃杯都是工业制品，不值钱，最贵不过二十元。但它们都不是我想象中玻璃杯应有的样子。有颜色、有纹饰的玻璃杯都不纯粹，把手形状很离奇也不行。我理想中纯粹的玻璃杯，不应该有颜色，应该完全透明，厚度适中即可，虽然不需要很薄，但不能厚薄不一（仔细观察能发现这一点极难做到）。形状可以是圆柱形或方形，但里面不能有气泡，也不能留下加工痕迹，纹饰也不能要，即使是商标也不行。这种玻璃杯，我愿称其为形而上学的玻璃杯。</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2021 - #2 美国根本没有电影</h2>
+      <p>很多人可惜漫威的多部新电影在大陆都没有上映，但抛开其中复杂的背景，漫威电影在美国电影中实属”垃圾食品”级的东西，如果把其他国家的电影也算进去比，美国电影本身就是文化上的荒漠，漫威电影则是荒漠中的荒漠。电影虽然是一门艺术，但在美国终究是一门生意。为了稳妥地赚钱，美国电影人的两大法宝就只有类型化和工业技术，和形式化的炫技没什么区别，它和创新是针锋相对的。电影只有类型化了才能工业化，而积极进取的艺术家应该每次都有所突破——这需要试错，很可能会赔钱。所以漫威才会拍了几十部差不多的电影，所以地球每年要被美国电影拯救几十次。我觉得漫威电影看一两部即可，完全不看都没有什么损失，可惜我领悟到这个道理实在是太晚了。</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2># 2022/1/24</h2>
+      <p>乔姆斯基提出了“普遍语法”假说，认为人类有学习各种语法的能力。这一能力与生俱来。语言的学习都是基于同一个法则来学习的， 而所有语言，都有相同的底层结构——人类理解语言依赖于这一结构，如果打破该结构语言就无法被理解、被学习。计算机程序语言也有这个特征，实际上任何语言都依赖于计算机的物理结构：因此计算机程序语言可以互相“解释”，即可以用一门语言来“编译”另一门。语言学的“普遍语法”目前只是假说，计算机程序语言的“普遍语法”是确凿的（因为计算机是人造物）。那么音乐呢？如果音乐有某个“普遍语法”，那么必定有一大批当代作曲家的“人造语法”实际上是“非音乐”，或者说不具有“可理解性“。如果真是这样，我无法理解。
+        </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
